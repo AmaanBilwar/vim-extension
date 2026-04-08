@@ -1,55 +1,44 @@
-<div align="center">
-<img src="public/icon-128.png" alt="logo"/>
-<h1> Minimalist Chrome/Firefox Extension Boilerplate with<br/>React + Vite + TypeScript + TailwindCSS</h1>
+## Vim extension i wrote to browser the web 
+ 
+i tried using multiple vim extensions and none of them seemed to work, either behind a pay-wall, or unconfigurable keybinds or just me using a secure browser like Helium so I don't want to share my data. 
 
-<h5>
-This template repository is a side product of my Chrome Extension <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/supatabs/icbcnjlaegndjabnjbaeihnnmidbfigk">Supatabs</a>.
-<br />
-If you tend to have tons of tabs open, or are a OneTab user, make sure to check it out <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/supatabs/icbcnjlaegndjabnjbaeihnnmidbfigk">here</a>!
-</h5>
+So i wrote my own. try to use it. Let me know if you like it.
 
-<h5>Supatabs is an example and showcase of what you can develop with this template. (anything you want, really 🚀)</h5>
+## Usage 
 
-</div>
+### Keybinds (normal mode)
 
-## Table of Contents
+| Keys | Action |
+| --- | --- |
+| `j` / `k` | Scroll down / up |
+| `h` / `l` | Scroll left / right |
+| `d` / `u` | Half-page down / up |
+| `Ctrl+d` / `Ctrl+u` | Half-page down / up |
+| `gg` / `G` | Jump to top / bottom of page |
+| `f` | Enter hint mode for clickable elements |
+| `/` | Open find mode |
+| `n` / `N` | Next / previous match for last search |
+| `Esc` | Blur active input (insert mode) / exit hint or find mode |
 
-- [Intro](#intro)
-- [Features](#features)
-- [Usage](#usage)
-  - [Getting Started](#gettingStarted) 
-  - [Customization](#customization)
-  - [Publish](#publish)
-- [Tech Docs](#tech)
-- [Credit](#credit)
-- [Contributing](#contributing)
+### Keybinds (hint mode)
 
+| Keys | Action |
+| --- | --- |
+| `a-z` | Filter visible hint labels |
+| `Backspace` | Remove the last typed hint character |
+| `Enter` | Confirm the exact/remaining hint |
+| `Esc` | Exit hint mode |
 
-## Intro <a name="intro"></a>
-This boilerplate is meant to be a minimal quick start for creating chrome/firefox extensions using React, Typescript and Tailwind CSS.
+### Keybinds (find mode)
 
-It includes all possible pages such as **new tab**, **dev panel**, **pop up**, etc., as well as corresponding manifest settings by default.
-You will likely have to customize/delete some of the pages (see docs below).
+| Keys | Action |
+| --- | --- |
+| `a-z` (or any typed character) | Build the search query |
+| `Backspace` | Remove last search character |
+| `Enter` / `Shift+Enter` | Next / previous result |
+| `Esc` | Exit find mode |
 
-You can build dist files for both Chrome and Firefox with manifest v3.
-
-If you are looking for a React focused way to access the local storage, I also implemented a chrome local/sync storage hook. The hook works
-well with this template. [Check it out here](https://gist.github.com/JohnBra/c81451ea7bc9e77f8021beb4f198ab96).
-
-## Features <a name="features"></a>
-- [React 19](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS 4](https://tailwindcss.com/)
-- [i18n (optional)](https://developer.chrome.com/docs/extensions/reference/api/i18n)
-- [Cross browser development with polyfill (optional)](https://github.com/mozilla/webextension-polyfill?tab=readme-ov-file#basic-setup-with-module-bundlers)
-- [ESLint](https://eslint.org/)
-- [Chrome Extension Manifest Version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
-- [Github Action](https://github.com/JohnBra/vite-web-extension/actions/workflows/ci.yml) to build and zip your extension (manual trigger)
-
-## Usage <a name="usage"></a>
-
-### Getting Started <a name="gettingStarted"></a>
-
+### Getting Started 
 #### Developing and building
 This template comes with build configs for both Chrome and Firefox. Running
 `dev` or `build` commands without specifying the browser target will build
@@ -81,8 +70,7 @@ For Firefox
 3. Click - Load temporary Add-on
 4. Select - any file in `dist_firefox` folder (i.e. `manifest.json`) in this project (after dev or build)
 
-### Customization <a name="customization"></a>
-
+### Customization 
 #### Adding / removing pages
 The template includes source code for **all** of the extension pages (i.e. New Tab, Dev Tools, Popup, Side Panel
 etc.). You will likely have to customize it to fit your needs.
@@ -152,7 +140,7 @@ to add other translations and retrieve them in the extension.
 If you don't need i18n you can ignore the `locales` directory until you need it, as it won't
 be copied into the build folder unless the `localize` flag is set to `true`.
 
-### Publish your extension to the CWS<a name="publish"></a>
+### Publish your extension to the CWS
 To upload an extension to the Chrome store you have to pack (zip) it and then upload it to your item 
 in the Chrome Web Store.
 
@@ -167,7 +155,7 @@ To run the workflow do the following:
 5. In the summary page **"Artifacts"** section click on the generated **"vite-web-extension-chrome"**
 6. Upload this file to the Chrome Web Store as described [here](https://developer.chrome.com/docs/webstore/publish/)
 
-# Tech Docs <a name="tech"></a>
+# Tech Docs 
 - [Vite](https://vitejs.dev/)
 - [Vite Plugins](https://vitejs.dev/guide/api-plugin.html)
 - [Chrome Extension with manifest 3](https://developer.chrome.com/docs/extensions/mv3/)
@@ -177,5 +165,5 @@ To run the workflow do the following:
 - [Rollup](https://rollupjs.org/guide/en/)
 - [Tailwind CSS 4](https://tailwindcss.com/docs/configuration)
 
-# Contributing <a name="contributing"></a>
+# Contributing 
 Feel free to open PRs or raise issues!
