@@ -1,5 +1,131 @@
 @import "tailwindcss";
 
-.your-class {
-    color: aliceblue;
+#__vim_ext_root {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  font-family: "Iosevka", "JetBrains Mono", monospace;
+}
+
+.vim-ext-mode-badge {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #22333b;
+  background: #f5f7f8;
+  color: #22333b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.85;
+}
+
+.vim-ext-mode-badge.is-insert {
+  background: #ffeac2;
+  border-color: #5c3d00;
+  color: #5c3d00;
+}
+
+.vim-ext-mode-badge.is-hint {
+  background: #dff3e4;
+  border-color: #1e5f3f;
+  color: #1e5f3f;
+}
+
+.vim-ext-mode-badge.is-find {
+  background: #d8ebff;
+  border-color: #174a7c;
+  color: #174a7c;
+}
+
+.vim-ext-hint-layer {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+.vim-ext-hint-layer.is-active {
+  display: block;
+}
+
+.vim-ext-hint-badge {
+  position: fixed;
+  transform: translate(-10%, -35%);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #293241;
+  background: #ffcc00;
+  color: #1b1b1b;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: opacity 80ms ease;
+}
+
+.vim-ext-hint-badge.is-dim {
+  opacity: 0.2;
+}
+
+.vim-ext-hint-badge.is-match {
+  opacity: 1;
+}
+
+.vim-ext-hint-badge.is-exact {
+  background: #7ee081;
+  border-color: #184e1a;
+}
+
+.vim-ext-find-bar {
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #17324f;
+  background: #f4f9ff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.24);
+  pointer-events: auto;
+}
+
+.vim-ext-find-bar.is-active {
+  display: flex;
+}
+
+.vim-ext-find-bar.is-no-match {
+  border-color: #8a1c1c;
+  background: #fff1f1;
+}
+
+.vim-ext-find-label {
+  color: #17324f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vim-ext-find-input {
+  width: min(360px, 45vw);
+  min-width: 180px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #31567d;
+  background: #ffffff;
+  color: #101010;
+  font-size: 13px;
+  line-height: 1.2;
+  outline: none;
+}
+
+.vim-ext-find-input:focus {
+  border-color: #0f3b66;
+  box-shadow: 0 0 0 2px rgba(28, 91, 153, 0.2);
 }
