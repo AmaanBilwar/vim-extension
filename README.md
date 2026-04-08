@@ -38,6 +38,8 @@ So i wrote my own. try to use it. Let me know if you like it.
 | `Enter` / `Shift+Enter` | Next / previous result |
 | `Esc` | Exit find mode |
 
+![Keybind hints screenshot](public/vim-extension1.png)
+
 ### Getting Started 
 #### Developing and building
 This template comes with build configs for both Chrome and Firefox. Running
