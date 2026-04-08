@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "name in manifest.json",
-  "description": "description in manifest.json",
+  "name": "Amaan's Vim Extension",
+  "description": "minimal vim extension to browse for the browser because everything else is ass",
   "options_ui": {
     "page": "src/pages/options/index.html"
   },
@@ -10,9 +10,6 @@
     "default_icon": {
       "32": "icon-32.png"
     }
-  },
-  "chrome_url_overrides": {
-    "newtab": "src/pages/newtab/index.html"
   },
   "icons": {
     "128": "icon-128.png"
