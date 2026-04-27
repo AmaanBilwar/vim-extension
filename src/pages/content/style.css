@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* Removed @import tailwindcss to prevent it from affecting page styles */
 
 #__vim_ext_root {
   position: fixed;
