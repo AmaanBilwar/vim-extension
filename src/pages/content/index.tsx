@@ -49,6 +49,31 @@ root.appendChild(findBar);
 
 let lastFindQuery = '';
 
+const isInFullscreen = (): boolean => {
+  return !!(
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement
+  );
+};
+
+const updateUIVisibility = (): void => {
+  const fullscreen = isInFullscreen();
+  root.style.display = fullscreen ? 'none' : 'block';
+};
+
+const onFullscreenChange = (): void => {
+  updateUIVisibility();
+};
+
+document.addEventListener('fullscreenchange', onFullscreenChange);
+document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+document.addEventListener('mozfullscreenchange', onFullscreenChange);
+document.addEventListener('MSFullscreenChange', onFullscreenChange);
+
+updateUIVisibility();
+
 const getEffectiveMode = (eventTarget?: EventTarget | null): Mode => {
   if (mode === 'find') return 'find';
   if (mode === 'hint') return 'hint';
